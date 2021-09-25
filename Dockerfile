@@ -1,5 +1,3 @@
-FROM homebrew/brew:latest
-USER root
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo Asia/Shanghai > /etc/timezone
-USER linuxbrew
-ENV HOMEBREW_NO_AUTO_UPDATE=1
+FROM ubuntu
+RUN apt install wget -y
+RUN wget http://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.52-86.0/interproscan-5.52-86.0-64-bit.tar.gz
